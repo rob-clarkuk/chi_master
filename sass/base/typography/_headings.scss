@@ -1,0 +1,86 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	font-family: $font__heading;
+	font-weight: 300;
+}
+
+.heading{
+	padding:0;
+	margin: 0;
+	&__xxl{
+		font-size: 150px;
+		@media screen and (max-width:1023px){
+			font-size: 72px;
+		}
+		@media screen and (max-width:767px){
+			font-size: 52px;
+		}
+	}
+	&__xl{
+		font-size: 72px;
+		@media screen and (max-width:1023px){
+			font-size: 52px;
+		}
+	}
+	&__lg{
+		font-size: 28px;
+		@media screen and (max-width:1023px){
+			font-size: 20px;
+		}
+	}
+	&__md{
+		font-size: 24px;
+		@media screen and (max-width:1023px){
+			font-size: 18px;
+		}
+	}
+	&__sm{
+		font-size: 18px;
+		@media screen and (max-width:1023px){
+			font-size: 16px;
+		}
+	}
+	&__xs{
+		font-size: 16px;
+		@media screen and (max-width:1023px){
+			font-size: 14px;
+		}
+	}
+	&__light{
+		color: $white;
+	}
+	&__dark{
+		color: $black;
+	}
+	&__mid-grey{
+		color: $medium-grey;
+	}
+	&__caps{
+		text-transform: uppercase;
+	}
+	&__heading-font{
+		font-family: $font__heading;
+	}
+	&__body-font{
+		font-family: $font__main;
+	}
+	&__line-height{
+		line-height: .8;
+	}
+	&__text-gap{
+		letter-spacing: 6px;
+	}
+	&__underline{
+		text-decoration: underline;
+	}
+	&__cursor{
+		&:hover{
+			cursor: pointer;
+		}
+	}
+}

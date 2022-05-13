@@ -1,0 +1,11 @@
+.cta{
+	background-color:$light-grey;
+	&__dark{
+		background-color:$dark-grey;
+		color:$white;
+		.btn{
+			color: $white;
+			border:1px solid $white;
+		}
+	}
+}

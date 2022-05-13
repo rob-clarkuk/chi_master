@@ -1,0 +1,51 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: $color__border-button;
+	color: rgba(0, 0, 0, 0.8);
+	line-height: 1;
+	padding: calc(1em  - 2px) 1.5em !important;
+}
+
+.btn{
+	border:1px solid $primary-color;
+	background-color:transparent;
+	padding:1em 1.5em;
+	display:inline-block;
+	position:relative;
+	overflow:hidden;
+	transition:.3s;
+	&:before{
+		content:'';
+		height:100%;
+		width:100%;
+		position:absolute;
+		background-color: $primary-color;
+		left:calc(-100% - 1px);
+		top:0;
+		z-index:-1;
+		transition:.3s;
+	}
+	&:hover{
+		color:$white;
+		transition:.3s;
+		&:before{
+			left:0;
+			transition:.3s;
+		}
+	}
+	&__light{
+		border:1px solid $white;
+		&:before{
+			background-color: $white;
+		}
+		&:hover{
+			color:$dark-grey;
+		}
+	}
+	&__thin{
+		padding:0.5em 1.5em;
+	}
+}

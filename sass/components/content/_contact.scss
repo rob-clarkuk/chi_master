@@ -1,0 +1,82 @@
+.contact{
+	form{
+		p{
+			display:grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 2em;
+			@media screen and (max-width:767px){
+				display:block;
+			}
+		}
+		br{
+			display: none;
+		}
+		.enquiry{
+			grid-column: span 2;
+			@media screen and (max-width:767px){
+				grid-column: span 1;
+			}
+		}
+	}
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="number"],
+	input[type="tel"],
+	input[type="range"],
+	input[type="date"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="color"],
+	select,
+	textarea{
+		width: 100%;
+		border: 1px solid $dark-grey;
+		@media screen and (max-width:767px){
+			margin-bottom:2em;
+		}
+	}
+	input[type=submit]{
+		grid-column: span 2;
+		width:min-content;
+		text-transform: uppercase;
+		background-color:transparent;
+		border:1px solid $dark-grey;
+		padding:10px 30px;
+		border-radius:0;
+		transition:.3s;
+		&:hover{
+			background-color:$primary-color;
+			color:$white;
+			transition:.3s;
+			cursor:pointer;
+		}
+		@media screen and (max-width:767px){
+			margin-top:2em;
+		}
+	}
+	&__details{
+		background-color: $primary-color;
+		&--container{
+			display:grid;
+			grid-gap:2em;
+			grid-template-columns:repeat(2, 1fr);
+			@media screen and (max-width:767px){
+				grid-template-columns:repeat(1, 1fr);
+			}
+		}
+		.container{
+			display:flex;
+			justify-content: space-around;
+		}
+	}
+}
+
+#contactMap{
+	height: 400px;
+}
